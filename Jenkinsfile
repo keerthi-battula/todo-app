@@ -17,13 +17,13 @@ pipeline{
 
             }
         }
-        stage('sonar analysis'){
+       /* stage('sonar analysis'){
             steps{
                 withSonarQubeEnv('sonarQube'){
                     sh 'mvn -f app/pom.xml sonar:sonar'
                 }
             }
-        }
+        }*/
         stage('deploy to artifactor'){
             steps{
                 rtUpload (
@@ -64,7 +64,7 @@ pipeline{
         }
 
         
-        stage('Docker build'){
+       /* stage('Docker build'){
             steps{
                 // dir("var/lib/jenkins/workspace/test/todo-app/todo-app/artifacts"){
                     sh 'docker-compose build'
@@ -86,7 +86,7 @@ pipeline{
 
 
             }
-        }
+        }*/
 
     }
 }
