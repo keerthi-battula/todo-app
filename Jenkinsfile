@@ -17,13 +17,13 @@ pipeline{
 
             }
         }
-       /* stage('sonar analysis'){
+        stage('sonar analysis'){
             steps{
                 withSonarQubeEnv('sonarQube'){
-                    sh 'mvn -f app/pom.xml sonar:sonar'
+                    bat 'mvn -f app/pom.xml sonar:sonar'
                 }
             }
-        }*/
+        }
         stage('deploy to artifactor'){
             steps{
                 rtUpload (
