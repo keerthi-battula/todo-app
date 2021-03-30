@@ -7,13 +7,13 @@ pipeline{
     stages{
         stage('Fetch project from github'){
             steps{
-                git branch: 'master', url: 'https://github.com/sujjadshaik/todo-app.git'
+                git branch: 'master', url: 'https://github.com/keerthi-battula/todo-app.git'
             }
                 
         }
         stage('Maven package'){
             steps{
-                sh 'mvn -f /app/pom.xml package'
+                sh 'mvn -f app/pom.xml package'
 
             }
         }
