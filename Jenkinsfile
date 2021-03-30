@@ -13,7 +13,7 @@ pipeline{
         }
         stage('Maven package'){
             steps{
-                sh 'mvn -f app/pom.xml package'
+                sh 'mvn -f todo-app/app/pom.xml package'
 
             }
         }
